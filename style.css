@@ -1,0 +1,128 @@
+:root {
+  --text1: hsl(0, 0%, 100%);
+  --text2: hsl(215, 51%, 70%);
+  --cor-eth: hsl(178, 100%, 50%);
+  --background-color: hsl(217, 54%, 11%);
+  --primary-card-color: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+}
+
+body {
+  font-family: "Outfit", Arial, sans-serif;
+  margin: 0px;
+  background: var(--background-color);
+}
+
+h3,
+h2,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 375px;
+  padding: 25px;
+  margin: 100px auto;
+  border-radius: 10px;
+  background: var(--primary-card-color);
+  color: var(--text2);
+}
+
+.animation {
+  display: block;
+  width: 375px;
+  height: 375px;
+  border-radius: 10px;
+  background: url("./images/image-equilibrium.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.equilibrium {
+  display: block;
+  width: 375px;
+  height: 375px;
+  border-radius: 10px;
+}
+
+.icon {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.animation:hover .equilibrium {
+  background: #6fc3df;
+  opacity: 0.7;
+  transition: 1s ease;
+}
+
+.animation:hover .icon {
+  opacity: 1;
+}
+
+.equilibrium-name {
+  color: var(--text1);
+}
+
+.equilibrium-description {
+  font-size: 18px;
+}
+
+.value-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eth {
+  color: var(--eth-color);
+}
+
+.equilibrium-value,
+.equilibrium-date {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.line {
+  content: "";
+  max-width: 100%;
+  height: 2px;
+  background: var(--line-color);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.creator-image {
+  background-image: url("./images/image-avatar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+}
+
+.creator-name {
+  text-decoration: none;
+  color: var(--text1);
+}
+
+.creator-name:hover {
+  color: var(--cor-eth);
+  transition: 0.5s;
+}
